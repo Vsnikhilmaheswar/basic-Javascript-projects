@@ -23,7 +23,13 @@ calculateBill();
 const decreasePeople = () => {
     let increase = document.getElementById('numberOfPeople').innerText
     let currentValue = parseInt(increase);
-    currentValue-=1
-    numberOfPeople.innerText=currentValue;
+    if(currentValue>1)
+    {
+        currentValue-=1
+        numberOfPeople.innerText=currentValue;
+    }else{
+        console.log("error")
+    }
+    
     calculateBill();
 }
